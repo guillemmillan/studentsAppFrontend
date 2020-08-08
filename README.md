@@ -32,6 +32,8 @@ An app that helps students to find jobs with the help of their schools.
 
 ### Epics
 
+### Discovery
+
 ### Slides
 
 ### Kanban
