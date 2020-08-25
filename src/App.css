@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+/*BODY*/
+body{
+  font-family: 'Public Sans', sans-serif;
+  background-color: white;
+  color:#828282
+}
+
+h1 h2 {
+  color: #7DCFEC
+} 
+h3 h4 h5{
+  color: #828282
+}
+
+.btn{
+  background-color:#7DCFEC;
+  border-radius: 12px;
+  color: 
+}
+.btn:hover{
+
+}
+
+
+
+
+/*HEADER*/
+.menu{
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+}
+
+.menu li{
+  list-style: none;
+}
+.bannnerH{
+  height: 20vh;
+  width: 100%;
+  background-color:#828282;
+ 
+}
+.op{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+.op .searchJ{
+  background-image:url("https://media.giphy.com/media/iGupaoazjYWEFJYz1O/source.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: aqua;
+  width: 40%;
+  height: 100%;
+}
+.op .offerJ{
+  background-color: aqua;
+  width: 40%;
+}
+
+/*FOOTER*/
+footer{
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.mainFooter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 5%;
+    background-color: #F2F2F2;
+    }
+
+
+.mainFooter p{
+}
+.mainFooter i{
+  color: #C8C8C8
+}
+.mainFooter i:hover{
+  color:#7DCFEC
+}
