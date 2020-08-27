@@ -7,7 +7,7 @@ export class Home extends Component {
                 <header>
                     <div className="menu">
                         <ul>
-                            <li><a>Singup</a></li>
+                            <li><a href="/signup">Singup</a></li>
                             <li><a>Login</a></li>
                         </ul>
                     </div>
@@ -16,7 +16,8 @@ export class Home extends Component {
                         <br/>
                         <div className="op">
                             <div className="searchJ">
-                                <p>Search job</p>
+                                {/*<img src="https://lh6.googleusercontent.com/yjiNzjczxDl_72U3pDT15uqI_55vwnsDsURY7ZO7lZqJ-yA-3H_D1HC7q8n2lNunPK12Y9hqLpihZw=w3430-h6867-rw"></img>
+                               */} <p>Search job</p>
                             </div>
                             <div className="offerJ">
                                 <p>Offer Job</p>

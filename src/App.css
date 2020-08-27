@@ -53,10 +53,10 @@ h3 h4 h5{
 .btn{
   background-color:#7DCFEC;
   border-radius: 12px;
-  color: 
+  color: white
 }
 .btn:hover{
-
+color: black
 }
 
 
@@ -72,6 +72,7 @@ h3 h4 h5{
 
 .menu li{
   list-style: none;
+  float: left;
 }
 .bannnerH{
   height: 20vh;
@@ -84,7 +85,7 @@ h3 h4 h5{
   justify-content: space-around;
   height: 100%;
 }
-.op .searchJ{
+.op .searchJ {
   background-image:url("https://media.giphy.com/media/iGupaoazjYWEFJYz1O/source.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,9 +93,17 @@ h3 h4 h5{
   width: 40%;
   height: 100%;
 }
+.op p {
+  background-color: blanchedalmond;
+}
 .op .offerJ{
-  background-color: aqua;
-  width: 40%;
+    background-image:url("https://media.giphy.com/media/iGupaoazjYWEFJYz1O/source.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: aqua;
+    width: 40%;
+    height: 100%;
+  
 }
 
 /*FOOTER*/
@@ -117,7 +126,9 @@ footer{
 
 
 .mainFooter p{
+color: black
 }
+
 .mainFooter i{
   color: #C8C8C8
 }
