@@ -6,10 +6,8 @@ export class Home extends Component {
             <div>
                 <header>
                     <div className="menu">
-                        <ul>
-                            <li><a href="/signup">Singup</a></li>
-                            <li><a>Login</a></li>
-                        </ul>
+                            <a href="/signup">Singup</a>
+                            <a href="/login">Login</a>
                     </div>
                  <div className="bannnerH">
                         <h1>Find new job</h1>
@@ -17,10 +15,16 @@ export class Home extends Component {
                         <div className="op">
                             <div className="searchJ">
                                 {/*<img src="https://lh6.googleusercontent.com/yjiNzjczxDl_72U3pDT15uqI_55vwnsDsURY7ZO7lZqJ-yA-3H_D1HC7q8n2lNunPK12Y9hqLpihZw=w3430-h6867-rw"></img>
-                               */} <p>Search job</p>
+                               */} 
+                               <p>Search job</p>
+                               <button class="btn btn-dark"><a href="/jobs">Find job</a></button> 
+
                             </div>
                             <div className="offerJ">
-                                <p>Offer Job</p>
+                                <div class="rotate"><p >Offer Job</p>
+                                <button class="btn btn-dark"><a href="/add-job">Add job</a></button> 
+                                </div>
+                                
                             </div>
                         </div>
                       

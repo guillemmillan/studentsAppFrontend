@@ -64,10 +64,10 @@ color: black
 
 /*HEADER*/
 .menu{
-  list-style: none;
   display: flex;
-  flex-flow: row;
-  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 5%;
 }
 
 .menu li{
@@ -97,13 +97,18 @@ color: black
   background-color: blanchedalmond;
 }
 .op .offerJ{
+
     background-image:url("https://media.giphy.com/media/iGupaoazjYWEFJYz1O/source.gif");
+    transform: scaleX(-1);   
     background-repeat: no-repeat;
     background-size: cover;
     background-color: aqua;
     width: 40%;
     height: 100%;
   
+}
+.rotate{
+  transform: scaleX(-1);   
 }
 
 /*FOOTER*/

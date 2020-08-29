@@ -6,16 +6,16 @@ export class Footer extends Component {
             <div>
                 <footer className="mainFooter">
                     <div>
-                        <p>Jobs</p>
+                        <a href="/jobs">Jobs</a>
                     </div>
                     <div>
-                        <p>Business</p>
+                        <a href="/business">Business</a>
                     </div>
                     <div>
-                        <p>Search</p>
+                        <a href="/search">Search</a>
                     </div>
                     <div>
-                        <p>Profile</p>
+                        <a href="/profile">Profile</a>
                     </div>
                 </footer>
             </div>
