@@ -4,7 +4,7 @@ export class OneJob extends Component {
     render() {
         return (
             <div>
-                
+                            <h1>One job</h1>
             </div>
         )
     }

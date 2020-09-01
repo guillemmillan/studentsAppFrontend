@@ -14,6 +14,7 @@ import Profile from './components/auth/Profile';
 import AddJob from './components/AddJob';
 import NewJob from './components/NewJob';
 import { Search } from './components/Search';
+import BHome from './components/BHome';
 
 function App() {
   return (
@@ -27,10 +28,10 @@ function App() {
        <Route path="/new-job" component={NewJob}></Route>
        <Route exact path="/business" component={Business}></Route>
        <Route path="/business/:name" component={OneBusiness}></Route>
-       <Route exact path="/signup" component={Signup}></Route>
-       <Route exact path="/login" component={Login}></Route>
-       <Route exact path="/search" component={Search}></Route>
-       <Route exact path="/profile" component={Profile}></Route>
+       <Route path="/signup" render={props =><Signup {...props}/>}/>
+       <Route path="/login" component={Login}></Route>
+       <Route path="/search" component={Search}></Route>
+       <Route path="/profile" component={Profile}></Route>
      </Switch>
      <Footer/>
     </div>

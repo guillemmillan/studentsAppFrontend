@@ -90,8 +90,8 @@ color: black
   background-repeat: no-repeat;
   background-size: cover;
   background-color: aqua;
-  width: 40%;
-  height: 100%;
+  width: 400px;
+  height: 200px;
 }
 .op p {
   background-color: blanchedalmond;
@@ -103,14 +103,29 @@ color: black
     background-repeat: no-repeat;
     background-size: cover;
     background-color: aqua;
-    width: 40%;
-    height: 100%;
-  
+    width: 400px;
+    height: 200px;
 }
 .rotate{
   transform: scaleX(-1);   
 }
 
+/*MAIN*/
+.description{
+  background-color: cornflowerblue;
+  margin: 10%
+}
+.homeIcon img{
+  position: absolute;
+  left: 0px;
+  padding: 12px;
+  width: 60px;
+  background-color: cornsilk;
+  border-radius: 33px;
+}
+.homeIcon img:hover{
+ background-color:burlywood
+}
 /*FOOTER*/
 footer{
   position: absolute;

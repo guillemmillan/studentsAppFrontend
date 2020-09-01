@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 export class Login extends Component {
     render() {
         return (
-            <div> 
+            <div>
+ 
                 <h1>Login</h1>
                 <div className="loginForm">
                     <form>
