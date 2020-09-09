@@ -1,35 +1,40 @@
+
+
 import React, { Component } from 'react'
 import BHome from '../BHome'
-import AuthService from '../../auth/auth-service';
+import AuthService from './auth-service';
+import { Link } from 'react-router-dom';
 
-export class Signup extends Component {
-    constructor(props){
+class Signup extends Component {
+    constructor(props) {
         super(props);
-        this.state = { username: '', email: '', password: '' };
+        this.state = { username: '', password: '' };
         this.service = new AuthService();
-      }
-      handleFormSubmit = (event) => {
+    }
+
+    // recoger datos y modifica para ser enviados al back
+    
+    handleFormSubmit = (event) => {
         event.preventDefault();
         const username = this.state.username;
-        const email = this.state.email;
         const password = this.state.password;
-       
-        this.service.signup(username, email, password)
-        .then( response => {
-            this.setState({
-                username:   "",
-                email:  "", 
-                password:   "",
-            });
-            // this.props.getUser(response)
-        })
-        .catch( error => console.log(error) )
-      }
-       
-      handleChange = (event) => {  
-        const {name, value} = event.target;
-        this.setState({[name]: value});
-      }
+
+        this.service.signup(username, password)
+            .then(response => {
+                this.setState({
+                    username: "",
+                    password: ""
+                });
+                this.props.callback(response)
+            })
+            .catch(error => console.log(error))
+    }
+
+    handleChange = (event) => {
+        const { name, value } = event.target;
+        this.setState({ [name]: value });
+    }
+
     render() {
         return (
             <div>
@@ -37,25 +42,34 @@ export class Signup extends Component {
                 <h1>Singup</h1>
                 <div className="signupForm">
                 <form onSubmit={this.handleFormSubmit}>
-                    <label>Username </label>
-                    <input type="text" name="username" placeholder="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
-                    <br/>
-                 {/*  <label>Address</label>
-                    <input type="text" name="address" placeholder="Company Address"></input>
-                    <br/> */} 
-                    <label>Email </label>
-                    <input type="email" name="email" placeholder="email" value={this.state.email} onChange={ e => this.handleChange(e)}/>
-                    <br/>
-                    <label>Passowrd </label>
-                    <input type="password" name="password"  placeholder="password" value={this.state.password} onChange={ e => this.handleChange(e)}/>
-                    <label><input type="submit" value="Signup" />
-</label>
+                   <label>Email:</label>
+                        <input type="email" 
+                            name="email" 
+                            value={this.state.email} 
+                            onChange={e => this.handleChange(e)} />
+                    <label>Username:</label>
+                        <input type="text" 
+                            name="username" 
+                            value={this.state.username} 
+                            onChange={e => this.handleChange(e)} />
+
+                    <label>Password:</label>
+                        <input type="password" name="password" 
+                            value={this.state.password} 
+                            onChange={e => this.handleChange(e)} />
+
+                        <input type="submit" value="Signup" />
                 </form>
+                    
                 </div>
+                <p>Already have account? 
+          <Link to={"/login"}> Login</Link>
+      </p>
             
             </div>
         )
     }
 }
 
-export default Signup
+export default Signup 
+

@@ -1,11 +1,44 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export class Jobs extends Component {
-    render() {
-        return (
-            <div>
 
-                <h1>Jobs</h1>
+    constructor(props) {
+        super(props)
+        this.state = {
+            jobs: []
+        }
+    }
+
+    componentDidMount() {
+        this.getAllJobs()
+    }
+
+    getAllJobs() {
+        axios.get("http://localhost:5000/jobs")
+            .then(response => {
+                this.setState({
+                    jobs: response.data
+                })
+            })
+    }
+
+
+    render() {
+        const jobs = this.state.job.map(job =>(
+            <div key={job._id}>
+                <h3><Link to={"/jobs/" + job._id}>{job.Name}</Link></h3>
+                <p>{job.Company}</p>
+            </div>
+        ))
+
+        return (
+            <div className="jobsList">
+
+                <h1>Jobs list</h1>
+                {jobs}
+
             </div>
         )
     }

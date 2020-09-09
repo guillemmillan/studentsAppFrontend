@@ -111,6 +111,9 @@ color: black
 }
 
 /*MAIN*/
+.home{
+  height:100vh;
+}
 .description{
   background-color: cornflowerblue;
   margin: 10%
@@ -127,13 +130,14 @@ color: black
  background-color:burlywood
 }
 /*FOOTER*/
+div.stikcy{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+ }
 footer{
-  position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    overflow:hidden;
+  
+  width: 100%;
 }
 
 .mainFooter{
@@ -154,4 +158,8 @@ color: black
 }
 .mainFooter i:hover{
   color:#7DCFEC
+}
+
+.addJob{
+  
 }

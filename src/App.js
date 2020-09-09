@@ -11,10 +11,8 @@ import OneJob from './components/OneJob';
 import OneBusiness from './components/OneBusiness';
 import Login from './components/auth/Login';
 import Profile from './components/auth/Profile';
-import AddJob from './components/AddJob';
-import NewJob from './components/NewJob';
 import { Search } from './components/Search';
-import BHome from './components/BHome';
+import AddJob from './components/AddJob';
 
 function App() {
   return (
@@ -25,15 +23,14 @@ function App() {
        <Route exact path="/jobs" component={Jobs}></Route>
        <Route path="/jobs/:id" component={OneJob}></Route>
        <Route path="/add-job" component={AddJob}></Route>
-       <Route path="/new-job" component={NewJob}></Route>
        <Route exact path="/business" component={Business}></Route>
-       <Route path="/business/:name" component={OneBusiness}></Route>
+       <Route exact path="/signup" component={Signup}/>
+       {/*<Route path="/business/:name" component={OneBusiness}></Route>*/}
        <Route path="/signup" render={props =><Signup {...props}/>}/>
        <Route path="/login" component={Login}></Route>
        <Route path="/search" component={Search}></Route>
        <Route path="/profile" component={Profile}></Route>
      </Switch>
-     <Footer/>
     </div>
   );
 }
