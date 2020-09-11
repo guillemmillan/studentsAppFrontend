@@ -1,20 +1,50 @@
 import React, { Component } from 'react'
+import AuthService from '../../auth/auth-service'
+import { Link } from 'react-router-dom';
+import BHome from '../BHome';
 
 export class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { username: '', password: '' };
+        this.service = new AuthService();
+    }
+    handleFormSubmit = (event) => {
+        event.preventDefault();
+        const username = this.state.username;
+        const password = this.state.password;
+        this.service.login(username, password)
+            .then(response => {
+                this.setState({ username: "", password: "" });
+                this.props.callback(response)
+            })
+            .catch(error => console.log(error))
+    }
+
+    handleChange = (event) => {
+        const { name, value } = event.target;
+        this.setState({ [name]: value });
+    }
     render() {
+
         return (
-            <div>
- 
+            <div className="login">
+                <BHome/>
                 <h1>Login</h1>
                 <div className="loginForm">
-                    <form>
+                    <form onSubmit={this.handleFormSubmit}>
                         <label>Username</label>
-                        <input type="text" name="username" placeholder="Username"></input>
+                        <input type="text" name="username" value={this.state.username} placeholder="Username"></input>
                         <br/>
                         <label>Passowrd</label>
-                        <input type="password" name="password"  placeholder="password"></input>
-                        <input type="submit"></input>
+                        <input type="password" value={this.state.password} name="password"  placeholder="password"></input>
+                        <br/>
+                        <input value="Login" type="submit"></input>
                     </form>
+                    <p>
+                    Don't have account?
+                    <Link to={"/signup"}> Signup</Link>
+                </p>
                 </div>
             </div>
         )

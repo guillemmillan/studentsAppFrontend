@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BHome from './BHome';
 
 export class AddJob extends Component {
     constructor(props) {
@@ -29,10 +30,11 @@ export class AddJob extends Component {
     render() {
         return (
             <div className="addJob">
+                <BHome/>
                 <h1>Add job</h1>
                 <p className="newJob">To add a new job to the app you need to have an account please <a href="/signup">signup</a></p>
                     <div>
-                            <form>
+                            <form  onSubmit={this.handleFormSubmit}>
                                 <label>Job</label>
                                 <input type="text" name="jobName" placeholder="Job name" value={this.jobName} ></input>
                                 <br/>
@@ -47,6 +49,8 @@ export class AddJob extends Component {
                                 <br/>
                                 <label>Image</label>
                                 <input type="file" name="jobImage" value={this.state.jobImage}></input>
+                                <br/>
+                                <input type="submit" name="submit"></input>
                             </form>
 
                     </div>

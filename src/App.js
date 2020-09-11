@@ -13,6 +13,8 @@ import Login from './components/auth/Login';
 import Profile from './components/auth/Profile';
 import { Search } from './components/Search';
 import AddJob from './components/AddJob';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+
 
 function App() {
   return (

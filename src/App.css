@@ -111,6 +111,7 @@ color: black
 }
 
 /*MAIN*/
+
 .home{
   height:100vh;
 }
@@ -128,6 +129,18 @@ color: black
 }
 .homeIcon img:hover{
  background-color:burlywood
+}
+.home main{
+  color:white;
+  background-color:#282c34;
+}
+.home h2{
+padding-top: 10%;
+}
+.main{
+    display: flex;
+    flex-flow: column;
+    
 }
 /*FOOTER*/
 div.stikcy{
@@ -163,3 +176,67 @@ color: black
 .addJob{
   
 }
+/*SIGNUP*/
+.signup{
+  background-color: cadetblue;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.signup  .header{
+background-color: #282c34;    
+color: white;
+height: 10vh;
+}
+
+.mainSignup{
+  display: flex;
+  flex-flow: row;
+  padding: 20px;
+  height: 100vh;
+  color:white;
+}
+
+.infosign{
+  width:48%
+}
+.infosign ul{
+  margin-top:5%;
+  padding: 10%;
+list-style: none;
+background-color:#282c34;
+border-radius: 33px;
+text-align: left;
+}
+.mainSignup img{
+  
+  margin: 10%;
+  width: 70%;
+  border-radius: 20px;
+
+}
+
+.signupForm{
+  
+display: flex;
+flex-flow: column;
+text-align: center;
+width: 48%;
+padding-top:10%;
+font-size: larger;
+
+}
+label{margin-right: 20px;
+  width:30%
+}
+input{
+  width: 300px;
+ border-radius: 20px;
+}
+/*Login*/
+.login{
+  background-color:#282c34;
+height: 100vh;
+color: white;
+}
+

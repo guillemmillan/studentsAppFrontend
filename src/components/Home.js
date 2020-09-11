@@ -30,6 +30,7 @@ export class Home extends Component {
                  </div>
                 </header>
                 <main>
+                    <h2>New job oportunites</h2>
                     <div className="description">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis feugiat massa et dui egestas feugiat. Morbi sit amet libero sapien. Aenean facilisis tincidunt bibendum. Aenean tristique metus sit amet mi scelerisque ultricies. Suspendisse elementum quam a imperdiet fringilla. Pellentesque elementum ultricies eros, et pharetra enim. Sed vulputate et ante id aliquam. Nulla eget venenatis velit. Phasellus commodo tortor at sodales gravida. Integer diam nulla, tincidunt eget auctor at, suscipit non tortor. Nam non porttitor orci. Aenean iaculis turpis ex, eu ullamcorper turpis porttitor sed. Ut tempus justo eros, sed imperdiet risus rutrum eget.
 
