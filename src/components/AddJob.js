@@ -1,25 +1,27 @@
 import React, { Component } from 'react'
 import BHome from './BHome';
+import Axios from 'axios';
 
 export class AddJob extends Component {
     constructor(props) {
         super(props);
         this.state = { jobName: '',
-                       jobcompanyName: '',
+                       jobCompanyName: '',
                        jobAddress: '',
                        jobDescription: '',
-                       jobImage: ''
                         };
     }
 
     // handleChange() and handleSubmit() will be added here
-    handleFormSubmit = (event) => {
+    handleFormSubmit = async (event) => {
         event.preventDefault();
-        const jobName = this.state.jobName;
-        const jobcompanyName = this.state.jobcompanyName;
-        const jobAddress = this.state.jobAddress;
-        const jobDescription = this.state.jobDescription;
-        const jobImage = this.state.jobImage;
+    await  Axios.post("http://localhost:5001/add-job", this.state, {withCredentials:true})
+       this.setState({ 
+            jobName: '',
+            jobCompanyName: '',
+            jobAddress: '',
+            jobDescription: '',
+        })
     }
 
     handleChange = (event) => {
@@ -36,21 +38,18 @@ export class AddJob extends Component {
                     <div>
                             <form  onSubmit={this.handleFormSubmit}>
                                 <label>Job</label>
-                                <input type="text" name="jobName" placeholder="Job name" value={this.jobName} ></input>
+                                <input type="text" name="jobName" placeholder="Job name" value={this.jobName} onChange={this.handleChange}/>
                                 <br/>
                                 <label>Company</label>
-                                <input type="text" name="jobcompanyName" placeholder="Company name" value={this.jobcompanyName} ></input>
+                                <input type="text" name="jobCompanyName" placeholder="Company name" value={this.jobCompanyName} onChange={this.handleChange}/>
                                 <br/>
                                 <label>Address</label>
-                                <input type="text" name="jobAddress" placeholder="add job address" value={this.jobAddress} ></input>
+                                <input type="text" name="jobAddress" placeholder="add job address" value={this.jobAddress} onChange={this.handleChange}/>
                                 <br/>
                                 <label>Description </label>
-                                <input type="text" name="jobDescription" placeholder="what jobs will develop" value={this.jobDescription} ></input>
+                                <input type="text" name="jobDescription" placeholder="what jobs will develop" value={this.jobDescription} onChange={this.handleChange}/>
                                 <br/>
-                                <label>Image</label>
-                                <input type="file" name="jobImage" value={this.state.jobImage}></input>
-                                <br/>
-                                <input type="submit" name="submit"></input>
+                                <input type="submit" name="submit"/>
                             </form>
 
                     </div>

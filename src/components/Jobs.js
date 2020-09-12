@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 export class Jobs extends Component {
-/*
+
     constructor(props) {
         super(props)
         this.state = {
@@ -18,18 +18,16 @@ export class Jobs extends Component {
     getAllJobs() {
         axios.get("http://localhost:5001/jobs")
             .then(response => {
-                this.setState({
-                    jobs: response.data
-                })
+           this.setState({jobs: response.data}) 
             })
     }
-*/
+
 
     render() {
-        const jobs = this.state.job.map(job =>(
-            <div key={job._id}>
-                <h3><Link to={"/jobs/" + job._id}>{job.Name}</Link></h3>
-                <p>{job.Company}</p>
+        const jobs = this.state.jobs.map(job =>(
+            <div className="joblistcont" key={job._id}>
+                <h3><Link to={"/jobs/" + job._id}>{job.name}</Link></h3>
+                <p>{job.company.Name}</p>
             </div>
         ))
 

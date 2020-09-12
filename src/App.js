@@ -14,6 +14,7 @@ import Profile from './components/auth/Profile';
 import { Search } from './components/Search';
 import AddJob from './components/AddJob';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import Addbusiness from './components/AddBusiness';
 
 
 function App() {
@@ -23,11 +24,12 @@ function App() {
      <Switch>
        <Route exact path="/" component={Home}></Route>
        <Route exact path="/jobs" component={Jobs}></Route>
-       <Route path="/jobs/:id" component={OneJob}></Route>
+       <Route path="/jobs/:_id" component={OneJob}></Route>
        <Route path="/add-job" component={AddJob}></Route>
        <Route exact path="/business" component={Business}></Route>
        <Route exact path="/signup" component={Signup}/>
-       {/*<Route path="/business/:name" component={OneBusiness}></Route>*/}
+       <Route path="/add-business" component={Addbusiness}></Route>
+       <Route path="/business/:_id" component={OneBusiness}></Route>
        <Route path="/signup" render={props =><Signup {...props}/>}/>
        <Route path="/login" component={Login}></Route>
        <Route path="/search" component={Search}></Route>

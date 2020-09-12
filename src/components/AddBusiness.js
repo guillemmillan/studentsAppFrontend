@@ -1,25 +1,26 @@
 import React, { Component } from 'react'
+import Axios from 'axios';
+import BHome from './BHome';
 
 export class Addbusiness extends Component {
     constructor(props) {
         super(props);
         this.state = { businessName: '',
-                       businesscompanyName: '',
                        businessAddress: '',
                        businessDescription: '',
-                       businessImage: ''
                         };
                         
     }
 
     // handleChange() and handleSubmit() will be added here
     handleFormSubmit = (event) => {
+        Axios.post("http://localhost:5001/add-business",this.state, {withCredentials:true} )
         event.preventDefault();
-        const businessName = this.state.businessName;
-        const businesscompanyName = this.state.businesscompanyName; 
-        const businessAddress = this.state.businessAddress;
-        const businessDescription = this.state.businessDescription;
-        const businessImage = this.state.businessImage;
+        this.setState({ 
+        businessName: '',
+        businessAddress: '',
+        businessDescription: '',
+         })
     }
 
     handleChange = (event) => {
@@ -30,24 +31,22 @@ export class Addbusiness extends Component {
     render() {
         return (
             <div className="addbusiness">
+                                <BHome/>
                 <h1>Add business</h1>
                 <p className="newbusiness">To add a new business to the app you need to have an account please <a href="/signup">signup</a></p>
                     <div>
-                            <form>
-                                <label>business</label>
-                                <input type="text" name="businessName" placeholder="business name" value={this.state.businessName} ></input>
+                            <form onSubmit={this.handleFormSubmit}>
+                                <label>Business</label>
+                                <input type="text" name="businessName" placeholder="business name" value={this.state.businessName} onChange={this.handleChange}/>
                                 <br/>
-                                <label>Company</label>
-                                <input type="text" name="businesscompanyName" placeholder="Company name" value={this.state.businesscompanyName} ></input>
-                                <br/>
+                               
                                 <label>Address</label>
-                                <input type="text" name="businessAddress" placeholder="add business address" value={this.state.businessAddress} ></input>
+                                <input type="text" name="businessAddress" placeholder="add business address" value={this.state.businessAddress} onChange={this.handleChange}/>
                                 <br/>
                                 <label>Description </label>
-                                <input type="text" name="businessDescription" placeholder="what businesss will develop" value={this.state.businessDescription} ></input>
+                                <input type="text" name="businessDescription" placeholder="descrive your business" value={this.state.businessDescription} onChange={this.handleChange}/>
                                 <br/>
-                                <label>Image</label>
-                                <input type="file" name="businessImage" value={this.state.businessImage}></input>
+                                <input type="submit" name="submit"/>
                             </form>
 
                     </div>

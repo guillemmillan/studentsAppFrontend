@@ -34,13 +34,13 @@ export class Login extends Component {
                 <div className="loginForm">
                     <form onSubmit={this.handleFormSubmit}>
                         <label>Username</label>
-                        <input type="text" name="username" value={this.state.username} placeholder="Username"></input>
+                        <input type="text" name="username" value={this.state.username} placeholder="Username" onChange={this.handleChange}/>
                         <br/>
                         <label>Passowrd</label>
-                        <input type="password" value={this.state.password} name="password"  placeholder="password"></input>
+                        <input type="password" value={this.state.password} name="password"  placeholder="password" onChange={this.handleChange}/>
                         <br/>
-                        <input value="Login" type="submit"></input>
-                    </form>
+                        <input value="Login" type="submit"/>
+                        </form>
                     <p>
                     Don't have account?
                     <Link to={"/signup"}> Signup</Link>
