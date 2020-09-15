@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import BHome from './BHome'
 
 export class OneBusiness extends Component {
     constructor(props){
@@ -21,6 +22,8 @@ export class OneBusiness extends Component {
     render() {
         return (
             <div>
+                                    <BHome/> 
+                
                                 <h1> One business</h1>
             </div>
         )

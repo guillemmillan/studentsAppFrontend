@@ -21,8 +21,21 @@ export class AddJob extends Component {
             jobCompanyName: '',
             jobAddress: '',
             jobDescription: '',
+            imageUrl:''
         })
     }
+    handleFileSubmit = (event) =>{
+        console.log("The file to be uploaded is: ", event.target.files[0]);
+        const uploadData = new FormData()
+        uploadData.append("imageUrl", event.target.files[0])
+        Axios.post("http://localhost:5001/upload", uploadData)
+        .then(response =>{
+            this.setState({ imageUrl: response.secure_url });
+        })
+        .catch(err => {
+          console.log("Error while uploading the file: ", err);
+        });
+  }
 
     handleChange = (event) => {
         const { name, value } = event.target;

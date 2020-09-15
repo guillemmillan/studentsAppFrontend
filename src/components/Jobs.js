@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import BHome from './BHome'
 export class Jobs extends Component {
 
     constructor(props) {
@@ -26,6 +26,7 @@ export class Jobs extends Component {
     render() {
         const jobs = this.state.jobs.map(job =>(
             <div className="joblistcont" key={job._id}>
+                <img src={job.image}/>
                 <h3><Link to={"/jobs/" + job._id}>{job.name}</Link></h3>
                 <p>{job.company.Name}</p>
             </div>
@@ -33,9 +34,12 @@ export class Jobs extends Component {
 
         return (
             <div className="jobsList">
-
-                <h1>Jobs list</h1>
-                {jobs}
+                <div>
+                    <BHome/> 
+                    <h1>Jobs list</h1>
+                    {jobs}
+                </div>
+              
 
             </div>
         )

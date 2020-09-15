@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BHome from './BHome'
 
 export class NewJob extends Component {
     render() {

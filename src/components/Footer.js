@@ -6,10 +6,10 @@ export class Footer extends Component {
             <div className="sticky">
                 <footer className="mainFooter">
                     <div>
-                        <a href="/jobs">Jobs</a>
+                        <a href="/jobs">Find Jobs</a>
                     </div>
                     <div>
-                        <a href="/business">Business</a>
+                        <a href="/add-business">Add Business</a>
                     </div>
                     <div>
                         <a href="/search">Search</a>

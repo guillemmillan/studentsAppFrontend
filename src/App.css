@@ -248,15 +248,17 @@ color: white;
   background-color: #282c34;
   color: white;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+
 }
 .joblistcont{
   background-color: white;
   float:left;
   color: #282c34;
-  padding: 5%;
-  border-radius: 3%;
+  width:300px;
+  height: 300px;
+  margin: 3%;
+  border-radius: 16%;
+  float: left;
 }
 
 /*oneJob*/

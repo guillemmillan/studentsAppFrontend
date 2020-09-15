@@ -8,11 +8,13 @@ export class Addbusiness extends Component {
         this.state = { businessName: '',
                        businessAddress: '',
                        businessDescription: '',
+                       imageUrl:''
                         };
                         
     }
 
-    // handleChange() and handleSubmit() will be added here
+    // handleChange() and 
+    //handleSubmit() will be added here
     handleFormSubmit = (event) => {
         Axios.post("http://localhost:5001/add-business",this.state, {withCredentials:true} )
         event.preventDefault();
@@ -20,14 +22,29 @@ export class Addbusiness extends Component {
         businessName: '',
         businessAddress: '',
         businessDescription: '',
+        imageUrl:'',
          })
     }
+ 
 
     handleChange = (event) => {
         const { name, value } = event.target;
         this.setState({ [name]: value });
     }
-    
+
+    handleFileSubmit = (event) =>{
+        console.log("The file to be uploaded is: ", event.target.files[0]);
+        const uploadData = new FormData()
+        uploadData.append("imageUrl", event.target.files[0])
+        Axios.post("http://localhost:5001/upload", uploadData)
+        .then(response =>{
+            this.setState({ imageUrl: response.secure_url });
+        })
+        .catch(err => {
+          console.log("Error while uploading the file: ", err);
+        });
+  }
+
     render() {
         return (
             <div className="addbusiness">
@@ -45,6 +62,9 @@ export class Addbusiness extends Component {
                                 <br/>
                                 <label>Description </label>
                                 <input type="text" name="businessDescription" placeholder="descrive your business" value={this.state.businessDescription} onChange={this.handleChange}/>
+                                <br/>
+                                <label> </label>
+                                <input type="file" name="imageUrl" onChange={(event) => this.handleFileSubmit(event)}/>
                                 <br/>
                                 <input type="submit" name="submit"/>
                             </form>

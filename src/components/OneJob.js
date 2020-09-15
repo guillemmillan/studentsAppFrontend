@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import BHome from './BHome'
 
 export class OneJob extends Component {
     constructor(props){
@@ -25,6 +26,7 @@ export class OneJob extends Component {
         console.log(this.props)
         return (
             <div className="oneJob"> 
+                <BHome/> 
                 <div class="imageJob"><img src={this.state.job.image} alt="job image"/></div>
                 <div class="descriptionJob"> 
                    <h1>Job offer for: {this.state.job.name}</h1>  
