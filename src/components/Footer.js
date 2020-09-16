@@ -11,9 +11,7 @@ export class Footer extends Component {
                     <div>
                         <a href="/add-business">Add Business</a>
                     </div>
-                    <div>
-                        <a href="/search">Search</a>
-                    </div>
+
                     <div>
                         <a href="/profile">Profile</a>
                     </div>

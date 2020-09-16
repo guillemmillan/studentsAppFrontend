@@ -192,7 +192,8 @@ color: black
 }
 
 .addJob{
-  
+  height:100vh;
+  background-color: blanchedalmond;
 }
 /*SIGNUP*/
 .signup{
