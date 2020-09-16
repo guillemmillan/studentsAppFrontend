@@ -15,8 +15,8 @@ export class AddJob extends Component {
     // handleChange() and handleSubmit() will be added here
     handleFormSubmit = async (event) => {
         event.preventDefault();
-    await  Axios.post("http://localhost:5001/add-job", this.state, {withCredentials:true})
-       this.setState({ 
+        await  Axios.post("http://localhost:5001/add-job", this.state, {withCredentials:true})
+        this.setState({ 
             jobName: '',
             jobCompanyName: '',
             jobAddress: '',
