@@ -32,7 +32,7 @@ export class Login extends Component {
                 <BHome/>
                 <h1>Login</h1>
                 <div className="loginForm">
-                    <form onSubmit={this.handleFormSubmit}>
+                    <form className="loginFormStyle" onSubmit={this.handleFormSubmit}>
                         <label>Username</label>
                         <input type="text" name="username" value={this.state.username} placeholder="Username" onChange={this.handleChange}/>
                         <br/>

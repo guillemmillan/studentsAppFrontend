@@ -75,18 +75,44 @@ color: black
   float: left;
 }
 .bannnerH{
-  height: 20vh;
+  height: 40vh;
   width: 100%;
+  background-image: url(http://clientes.wiroagency.com/pruebas/wp-content/uploads/sites/5/2020/09/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color:#828282;
  
+}
+.title{
+  height: 40vh;
+  background-color:rgba(40, 44, 52, 0.3);
+  color: white;
+}
+.mainTitle{
+  padding-top:60px;
+}
+
+
+/*MAIN*/
+
+.home{
+  height:100%;
+}
+.description{
+  background-color: cornflowerblue;
+  margin: 10%
+}
+.desc1{
+  
 }
 .op{
   display: flex;
   justify-content: space-around;
   height: 100%;
+  padding-top: 3%;
 }
 .op .searchJ {
-  background-image:url("https://media.giphy.com/media/iGupaoazjYWEFJYz1O/source.gif");
+  background-image:url("http://clientes.wiroagency.com/pruebas/wp-content/uploads/sites/5/2020/09/photo-1454165804606-c3d57bc86b40.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: aqua;
@@ -98,7 +124,7 @@ color: black
 }
 .op .offerJ{
 
-    background-image:url("https://media.giphy.com/media/iGupaoazjYWEFJYz1O/source.gif");
+    background-image:url("http://clientes.wiroagency.com/pruebas/wp-content/uploads/sites/5/2020/09/photo-1497366754035-f200968a6e72.jpg");
     transform: scaleX(-1);   
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,19 +134,6 @@ color: black
 }
 .rotate{
   transform: scaleX(-1);   
-}
-
-/*MAIN*/
-
-.home{
-  height:100vh;
-}
-.description{
-  background-color: cornflowerblue;
-  margin: 10%
-}
-.desc1{
-  
 }
 
 .homeIcon img{
@@ -135,8 +148,9 @@ color: black
  background-color:burlywood
 }
 .home main{
-  color:white;
-  background-color:#282c34;
+  color:black;
+  background-color: cornflowerblue;
+  
 }
 .home h2{
 padding-top: 10%;
@@ -239,17 +253,30 @@ input{
 }
 /*Login*/
 .login{
-  background-color:#282c34;
 height: 100vh;
-color: white;
+color: black;
+background-color:cadetblue;
 }
+.loginForm{
+  background-color: blanchedalmond;
+  margin-top:10%;
+  margin-left:20%;
+  margin-right: 20%;
+  padding: 10%;
+  border-radius:33px ;
+}
+.loginFormStyle{
+
+}
+
+
 /*JOBS*/
 .jobsList{
   background-color: #282c34;
   color: white;
   height: 100vh;
-
 }
+
 .joblistcont{
   background-color: white;
   float:left;
@@ -274,6 +301,7 @@ color: white;
 .imageJob{
   width: 50%;
 }
+
 .descriptionJob{
   background-color: white;
   color:#282c34;
@@ -284,4 +312,48 @@ color: white;
   margin: 3%;
   padding: 5%;
   border-radius: 20px;
+}
+
+@media (min-width: 300px) and (max-width: 1020px) {
+  body{
+    width:100%;
+  }
+input{
+  width:100%;
+}
+
+.op{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 3%;
+  margin: 10px;
+padding-bottom:30px;
+}
+
+
+
+.op > .searchJ .offerJ {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: aqua;
+  width: 70%;
+  margin-left:15%;
+  margin-right: 15%;
+  height: 200px;
+}
+.searchJ{
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.offerJ{
+  border-radius: 20px;
+}
+
+
+footer{
+  
+  width: 100%;
+}
+
 }
